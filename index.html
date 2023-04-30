@@ -14,14 +14,6 @@
     <title>LabWork2</title>
 </head>
 <body>
-    <!-- <div>
-        <form id="taskAdd">
-            <input type="text" id="new-task" required>
-            <button type="submit">Добавить</button>
-        </form>
-        <ul id="task-list">
-        </ul>
-    </div> -->
     <div  class="input-group mb-3">
         <form id="taskAdd">
         <input type="text" id="newTask" class="form-control" placeholder="Название задачи" aria-label="Название задачи"
@@ -32,35 +24,5 @@
         </ul>
     </div>
 </body>
-<script>
-     const form = document.getElementById('taskAdd');
-     const input = document.getElementById('newTask');
-     const taskList = document.getElementById('taskList');
-
-     
-     function addTask(event) {
-     event.preventDefault(); 
-
-     const taskText = input.value.trim(); 
-
-     if (taskText) { 
-     const taskItem = document.createElement('li');
-     taskItem.textContent = taskText;
-     taskList.appendChild(taskItem);
-     input.value = ''; 
-     input.focus(); 
-     }
-     }
-
-     
-     function toggleTask(event) {
-     if (event.target.tagName === 'LI') {
-     event.target.classList.toggle('completed');
-     }
-     }
-
-     form.addEventListener('submit', addTask);
-     taskList.addEventListener('dblclick', toggleTask);
-
-</script>
+<script src="script.js"></script>
 </html>
